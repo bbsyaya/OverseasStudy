@@ -1,0 +1,28 @@
+{
+  "name": "overseas",
+  "version": "0.0.1",
+  "description": "该项目主要用于海外留学项目信息的发布和查阅",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luozhang002/OverseasStudy.git"
+  },
+  "keywords": [
+    "overseas",
+    "master",
+    "study",
+    "海外留学"
+  ],
+  "author": "罗章",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luozhang002/OverseasStudy/issues"
+  },
+  "homepage": "https://github.com/luozhang002/OverseasStudy#readme",
+  "dependencies": {
+    "mongodb": "^2.2.8"
+  }
+}
