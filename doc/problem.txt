@@ -1,0 +1,3 @@
+项目中遇到的问题：
+（1）mongodb中插入的数据重复:解决方法在控制台输入：
+db.users.ensureIndex({userId:1},{unique:true, dropDups:true})可以避免重复插入数据问题

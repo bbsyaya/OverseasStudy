@@ -1,5 +1,6 @@
 /*
 @xialuo 主要用来mongodb数据库增删查改测试
+该demo主要用于测试nodejs对数据库访问的基本操作
 */
 var http = require('http');
 var url = require('url');
@@ -14,13 +15,26 @@ db.open(function (err,db) {//连接数据库
     throw err;
   else{
     console.log("成功建立数据库连接");
-      db.collection("users", function (err,collection) {
-      collection.insert({username:"盼盼",firstname:"李"}, function (err,docs) {
-        console.log(docs)
-        // db.close();
+    db.collection("users", function (err,collection) {
+    //添加查询数据的代码
+      collection.find(function(error,cursor){
+        cursor.each(function(error,doc){
+          if(doc){
+            console.log("userId:"+ doc.userId+" age:"+doc.age);
+          }
+        });
       });
+      //插入数据的代码
+      collection.insert({userId:'001',username:"罗章",age:25}, function (err,docs) {
+        console.log(docs)
+      });
+
+      //删除数据的代码
+      collection.deleteOne({userId:'001'},function(error,success){
+        console.log(11111111111111111111);
+      })
+
     });        
-    // db.close();
   }
 });
 
