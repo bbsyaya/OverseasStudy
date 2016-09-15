@@ -5,15 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+//路由加载
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
-//加载管理员用户登录的路由
+var editor = require('./routes/editor/editor.js')
 var adminLogin = require('./routes/login/admin.js')
-// //加载小编用户登录的路由
-// var editorLogin = require('./routes/login/editor.js')
-// //加载文案撰写者的路由
-// var writeLogin = require('./routes/login/writer.js')
+
+
 
 
 var app = express();
@@ -31,10 +30,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'common')));
+
+
+
 //加载相应的路由逻辑
 app.use('/', routes);
 app.use('/users', users);
 app.use('/admin/login',adminLogin);
+app.use('/editor/record',editor)
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
