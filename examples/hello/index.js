@@ -3,10 +3,10 @@
 //   response.writeHead(200, {'Content-Type': 'text/plain'});
 //   response.end('Hello World\n');
 // }).listen(8888);
-//上面的代码是原生node访问操作,下面的代码改造成基于Express框架的hello,world程序
+// 上面的代码是原生node访问操作,下面的代码改造成基于Express框架的hello,world程序
+
 var express = require('express');
 var app = express();
-
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
