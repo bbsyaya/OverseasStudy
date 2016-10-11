@@ -1,37 +1,530 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title><%=title%>></title>
-	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  	<script src="/jquery/jquery.min.js"></script>
-  	<script src="/bootstrap/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<!-- 导航栏 -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://z1.muscache.com/airbnb/static/packages/common_o2.1-50a45a2f41dab81f98765e60188dc94c.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://z2.muscache.com/airbnb/static/packages/common-86180c1646b448bc4a69535df81ff5de.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://z0.muscache.com/airbnb/static/p1/slim-23bf7fa5d0f976804551fb5a17df6f0a.css" media="screen" rel="stylesheet" type="text/css" />
+    <title>出国留学 | 海归</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="with-new-header home_view v2 p1 slim-p1">
+    <!-- header -->
+    <div id="header" class="airbnb-header new  ">
+      <div class="header--sm show-sm" aria-hidden="true">
+        <a href="#" aria-label="首页" data-prevent-default class="link-reset burger--sm">
+          <i class="icon icon-reorder icon-rausch"></i>
+          <span class="screen-reader-only">Airbnb</span></a>
+        <div class="title--sm text-center">
+          <button class="btn btn-block search-btn--sm search-modal-trigger " style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            <i class="icon icon-search icon-gray"></i>
+            <span class="search-placeholder--sm">想去哪里？</span></button>
+          <a href="/" class="header-belo hide">
+            <span class="screen-reader-only">Airbnb</span></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+        <div class="action--sm"></div>
+        <nav class="nav--sm" role="navigation"></nav>
+        <div class="search-modal-container"></div>
       </div>
-    </nav>
-</body>
+      <header class="regular-header clearfix hide-sm" id="new-header" role="banner">
+        <div class="comp pull-left">
+          <a href="/" class="hdr-btn link-reset belo-container" aria-label="Airbnb">
+            <i class="icon icon-pos--lower  icon-airbnb-alt h2 show-login"></i>
+            <i class="icon icon-pos--lower  icon-airbnb show-logout"></i>
+          </a>
+        </div>
+        <div class="comp pull-right show-logout">
+          <a data-login-modal="" href="/login" data-redirect="redirect_params[action]=show&amp;redirect_params[controller]=homepages" class="hdr-btn link-reset">登录</a></div>
+        <div class="comp pull-right show-logout">
+          <a data-signup-modal="" data-header-view="true" href="/signup_login" data-redirect="redirect_params[action]=show&amp;redirect_params[controller]=homepages" class="hdr-btn link-reset">注册</a></div>
+        <div class="comp pull-right show-travel-credit js-travel-credit-menu-container hide">
+          <a class="needsclick no-crawl hdr-btn link-reset js-travel-credit-comp" href="/invite?r=3" rel="nofollow" data-href="/invite?r=3">
+            <div class="gift-icon-container text-center">
+              <span class="margin-right--tiny hide-md">旅行基金</span>
+              <i class="header-icon js-travel-credit-icon icon-gift-alt-gray">
+                <i class="alert-count js-travel-credit-unread-count text-center fade in">1</i></i>
+            </div>
+          </a>
+          <div class="panel  drop-down-menu travel-credit-dropdown"></div>
+        </div>
+        <div id="js-header-help-menu">
+          <div class="comp pull-right help-trigger-wrapper no-border background-light-gray ">
+            <a class="hdr-btn js-help-toggle link-reset needsclick" href="/help">
+              <span class="margin-right--tiny hide-md">帮助</span>
+              <i class="header-icon icon-lifesaver-alt-gray"></i>
+            </a>
+          </div>
+        </div>
+        <div class="comp search-bar-wrapper" role="search">
+          <form action="/s" class="search-form">
+            <div class="search-bar">
+              <i class="header-icon icon-search-alt-gray search-icon"></i>
+              <input type="search" placeholder="想去哪里？" autocomplete="off" name="location" data-date-placeholder="年-月-日" class="location" />
+              <input type="hidden" name="source" value="hdr" /></div>
+          </form>
+        </div>
+      </header>
+    </div>
+    <!-- content -->
+    <main id="site-content" role="main">
+      <div class="hero js-hero">
+        <div class="hero__background" data-native-currency="CNY" aria-hidden="true">
+          <div class="air-slideshow hero-slideshow">
+            <ul class="air-slideshow__list list-unstyled js-hero-slideshow">
+              <li class="air-slide air-slide--active">
+                <img alt="Hero-1-sm" src="https://z0.muscache.com/airbnb/static/china/hero-1-sm.jpg" width="100%" /></li>
+              <li class="air-slide">
+                <img data-image-url="https://z0.muscache.com/airbnb/static/china/hero-2.jpg" alt="" width="100%"></li>
+              <li class="air-slide">
+                <img data-image-url="https://z0.muscache.com/airbnb/static/china/hero-3.jpg" alt="" width="100%"></li>
+              <li class="air-slide">
+                <img data-image-url="https://z0.muscache.com/airbnb/static/china/hero-4.jpg" alt="" width="100%"></li>
+              <li class="air-slide">
+                <img data-image-url="https://z0.muscache.com/airbnb/static/china/hero-5.jpg" alt="" width="100%"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal china-coupon-modal" id="confirm-coupon-modal" role="dialog" data-trigger="#launch-confirm-coupon-modal" aria-hidden="true" aria-labelledby="modal-body-label" aria-describedby="modal-body">
+          <div class="modal-table">
+            <div class="modal-cell">
+              <div class="modal-content">
+                <div id="modal-body-label" class="panel-header">
+                  <a href="#" class="modal-close" data-behavior="modal-close"></a>
+                </div>
+                <div id="modal-body" class="row panel-body">
+                  <div class="col-md-4 bg-white">
+                    <div class="va-container va-container-v va-container-h">
+                      <div>
+                        <i class="icon icon-size-4 icon-black icon-gift"></i>
+                      </div>
+                      <div class="text-left space-top-4 coupon-title">
+                        <strong>无法领取优惠券</strong></div>
+                      <div>
+                        <hr class="col-sm-2" />
+                        <br /></div>
+                      <div class="row space-top-2">
+                        <div class="col-md-12 coupon-text">很抱歉，此优惠券仅适用于初次使用支付宝预定Airbnb的旅行者。</div></div>
+                      <div class="space-top-6">
+                        <div class="space-top-2 space-4">
+                          <a href="/livethere/china_coupon_toc" class="btn btn-large detail-button">详细规则</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-container-full text-contrast">
+          <div class="page-container-responsive hero-content">
+            <div class="va-container va-container-v va-container-h">
+              <div class="va-middle">
+                <div class="narrow-container">
+                  <div>
+                    <h1 class="hide-sm">
+                      <strong>
+                        <div class="china-p1-with-coupon with-max-width hide">
+                          <div>去旅行，去生活
+                            <br>用支付宝安心预订</div>
+                          <h4>用支付宝预定首次行程，立减￥350</h4></div>
+                        <span class="china-p1-without-coupon ">去旅行，去生活，哪怕就住一晚。</span></strong>
+                    </h1>
+                    <div class="h2 space-2 with-max-width show-sm">
+                      <strong>
+                        <span class="china-p1-with-coupon hide">
+                          <div>去旅行，去生活
+                            <br>用支付宝安心预订</div>
+                          <h4>用支付宝预定首次行程，立减￥350</h4></span>
+                        <span class="china-p1-without-coupon ">去旅行，去生活，哪怕就住一晚。</span></strong>
+                    </div>
+                    <span class="china-p1-without-coupon ">
+                      <a href="#" data-prevent-default id="hero-play-button" class="link-reset">
+                        <i class="belong-anywhere__icon icon icon-video-play text-contrast text-jumbo"></i>
+                        <span class="screen-reader-only">播放视频</span></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--[if (gt IE 8)|!(IE)]>
+        <!-->
+        <div id="hero-video-player" class="fullscreen-video-player fullscreen-video-player--hidden" aria-hidden="true">
+          <div class="row row-table row-full-height">
+            <div class="col-sm-12 col-middle text-center">
+              <div data-hook="homepage-video" data-preload="none" data-mp4="https://a0.muscache.com/airbnb/static/CN_60s_Anthem.mp4" data-webm="https://a0.muscache.com/airbnb/static/Airbnb_60s_Anthem-2.webm" data-video-id=3></div>
+              <i id="play-button-hero" class="fullscreen-video-player__icon icon icon-video-play icon-white hide"></i>
+              <a id="close-fullscreen-hero" class="fullscreen-video-player__close link-reset" href="#">
+                <i class="icon icon-remove"></i>
+                <span class="screen-reader-only">退出全屏显示</span></a>
+            </div>
+          </div>
+        </div>
+      <!--<![endif]-->
+      <div class="white-background-wrapper">
+        <div class="page-container-responsive content-below-hero">
+          <div class="space-top-7 space-7">
+            <h3 class="space-4 hide-sm">
+              <strong>全球留学搜索</strong></h3>
+            <h4 class="space-4 show-sm">
+              <strong>全球留学搜索</strong></h4>
+            <div class="hide-sm">
+              <div id="searchbar">
+                <div class="searchbar row">
+                  <form id="searchbar-form" action="/s">
+                    <div class="searchbar__inputs-wrapper col-sm-10">
+                      <div class="row">
+                        <label class="searchbar__location col-md-4 col-lg-6">
+                          <span class="screen-reader-only">去哪留学？</span>
+                          <input id="location" type="text" class="input-large input-contrast" autocomplete="off" name="location" placeholder="去哪留学？" />
+                          <div id="searchbar-location-error" class="searchbar__location-error hide">请设置位置</div></label>
+                        <label class="searchbar__checkin col-md-3 col-lg-2">
+                          <span class="screen-reader-only">入住日期</span>
+                          <input id="checkin" type="text" class="checkin input-large input-contrast" name="checkin" placeholder="入住日期" /></label>
+                        <label class="searchbar__checkout col-md-3 col-lg-2">
+                          <span class="screen-reader-only">退房日期</span>
+                          <input id="checkout" type="text" class="checkout input-large input-contrast" name="checkout" placeholder="退房日期" /></label>
+                        <label class="searchbar__guests col-md-2">
+                          <span class="screen-reader-only">入住人数</span>
+                          <div class="select select-block select-large">
+                            <select id="guests" name="guests">
+                              <option value="1">1位房客</option>
+                              <option value="2">2位房客</option>
+                              <option value="3">3位房客</option>
+                              <option value="4">4位房客</option>
+                              <option value="5">5位房客</option>
+                              <option value="6">6位房客</option>
+                              <option value="7">7位房客</option>
+                              <option value="8">8位房客</option>
+                              <option value="9">9位房客</option>
+                              <option value="10">10位房客</option>
+                              <option value="11">11位房客</option>
+                              <option value="12">12位房客</option>
+                              <option value="13">13位房客</option>
+                              <option value="14">14位房客</option>
+                              <option value="15">15位房客</option>
+                              <option value="16">16+位房客</option></select>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="searchbar__submit-wrapper col-sm-2">
+                      <button id="submit_location" type="submit" class="searchbar__submit btn btn-primary btn-block btn-large">
+                        <span class="searchbar__submit-text">搜索</span></button>
+                    </div>
+                    <input type="hidden" name="source" value="bb"></form>
+                </div>
+              </div>
+            </div>
+            <div class="show-sm china-p1-sm-search text-center">
+              <div class="input-addon" id="sm-search-field" style="display: table; table-layout: fixed; width: 100%;">
+                <span class="input-stem input-large fake-search-field">想去哪里？</span>
+                <i class="input-suffix btn btn-primary icon icon-full icon-search"></i>
+              </div>
+            </div>
+          </div>
+          <div class="slim-p1-stories"></div>
+          <div class="destination-container space-7 hide-sm">
+            <hr />
+            <h3 class="space-top-7 space-4 hide-sm">
+              <strong>当季热门</strong></h3>
+            <h4 class="space-top-7 space-4 show-sm">
+              <strong>当季热门</strong></h4>
+            <div class="row space-4">
+              <div class="col-md-6 space-sm-2">
+                <a href="/s/Tokyo--Japan" target="sTokyoJapan" class="link-reset">
+                  <figure class="media-photo media-photo-block destination-tile ">
+                    <img src="https://z0.muscache.com/airbnb/static/homepages/china/destinations/tokyo-028a471568ba0bc97e136a464a88eff0.jpg" alt="Tokyo" class="img-responsive">
+                    <figcaption class="media-caption media-caption__text-left">
+                      <strong>东京</strong></figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6 space-sm-2">
+                    <a href="/s/Rio-de-Janeiro--Brazil" target="sRiodeJaneiroBrazil" class="link-reset">
+                      <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                        <img src="https://z2.muscache.com/airbnb/static/homepages/china/destinations/rio-c5c6d7640d674bc1b6c6cb4b867d48f1.jpg" alt="Rio de Janeiro" class="img-responsive">
+                        <figcaption class="media-caption media-caption__text-left">
+                          <strong>里约热内卢</strong></figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="col-md-6 space-sm-2">
+                    <a href="/s/London--United-Kingdom" target="sLondonUnitedKingdom" class="link-reset">
+                      <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                        <img src="https://z2.muscache.com/airbnb/static/homepages/china/destinations/london-5b146595a6754a9a11538b4a7b432745.jpg" alt="London" class="img-responsive">
+                        <figcaption class="media-caption media-caption__text-left">
+                          <strong>伦敦</strong></figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+                <div class="row space-top-24">
+                  <div class="col-md-6 space-sm-2">
+                    <a href="/s/Seoul--South-Korea" target="sSeoulSouthKorea" class="link-reset">
+                      <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                        <img src="https://z1.muscache.com/airbnb/static/homepages/china/destinations/seoul-402806bb337c3b8c9ab476bb640838d2.jpg" alt="Seoul" class="img-responsive">
+                        <figcaption class="media-caption media-caption__text-left">
+                          <strong>首尔</strong></figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                  <div class="col-md-6 space-sm-2">
+                    <a href="/s/Sydney--New-South-Wales--Australia" target="sSydneyNewSouthWalesAustralia" class="link-reset">
+                      <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                        <img src="https://z1.muscache.com/airbnb/static/homepages/china/destinations/sydney-c705a0549981e4136c2f8abcc9d0022e.jpg" alt="Sydney" class="img-responsive">
+                        <figcaption class="media-caption media-caption__text-left">
+                          <strong>悉尼</strong></figcaption>
+                      </figure>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="space-sm-2">
+                  <a href="/s/Bangkok-Thailand" target="sBangkokThailand" class="link-reset">
+                    <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                      <img src="https://z0.muscache.com/airbnb/static/homepages/china/destinations/bangkok-4e1f6877972f4ce71848cbe4b88282a0.jpg" alt="Bangkok" class="img-responsive">
+                      <figcaption class="media-caption media-caption__text-left">
+                        <strong>曼谷</strong></figcaption>
+                    </figure>
+                  </a>
+                </div>
+                <div class="space-top-24 space-sm-2">
+                  <a href="/s/Boston--MA--United-States" target="sBostonMAUnitedStates" class="link-reset">
+                    <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                      <img src="https://z2.muscache.com/airbnb/static/homepages/china/destinations/boston-40cc5b24426bed67ca3157a182491b87.jpg" alt="Boston" class="img-responsive">
+                      <figcaption class="media-caption media-caption__text-left">
+                        <strong>波士顿</strong></figcaption>
+                    </figure>
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6 space-sm-2">
+                <a href="/s/Paris--France" target="sParisFrance" class="link-reset">
+                  <figure class="media-photo media-photo-block destination-tile ">
+                    <img src="https://z2.muscache.com/airbnb/static/homepages/china/destinations/paris-4927d554632f52f6ac52d73691bea4e0.jpg" alt="Paris" class="img-responsive">
+                    <figcaption class="media-caption media-caption__text-left">
+                      <strong>巴黎</strong></figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="col-md-3">
+                <div class="space-sm-2">
+                  <a href="/s/Los-Angeles--CA--United-States" target="sLosAngelesCAUnitedStates" class="link-reset">
+                    <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                      <img src="https://z0.muscache.com/airbnb/static/homepages/china/destinations/los_angeles-03df5b4cce0d06cbb2c0e0093ea82b2d.jpg" alt="Los Angeles" class="img-responsive">
+                      <figcaption class="media-caption media-caption__text-left">
+                        <strong>洛杉矶</strong></figcaption>
+                    </figure>
+                  </a>
+                </div>
+                <div class="space-top-24">
+                  <a href="/s/Kuala-Lumpur-Federal-Territory-of-Kuala-Lumpur-Malaysia" target="sKualaLumpurFederalTerritoryofKualaLumpurMalaysia" class="link-reset">
+                    <figure class="media-photo media-photo-block destination-tile destination-tile__small">
+                      <img src="https://z0.muscache.com/airbnb/static/homepages/china/destinations/kuala_lumpur-bdf1fed086615b7c8bc321120e97d43f.jpg" alt="Kuala-Lumpur" class="img-responsive">
+                      <figcaption class="media-caption media-caption__text-left">
+                        <strong>吉隆坡</strong></figcaption>
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-rows-container show-sm space-4">
+            <hr />
+            <div data-hypernova-key="p1china_carousel_rowsbundlejs">
+              <div data-reactid=".jy54kpclc0" data-react-checksum="-804706958">
+                <div data-reactid=".jy54kpclc0.$carousel-row-top_destinations"></div>
+              </div>
+            </div>
+            <script type="application/json" data-hypernova-key="p1china_carousel_rowsbundlejs">< !--{
+                "data": [{
+                  "name": "top_destinations",
+                  "title": "当季热门",
+                  "cards_data": [{
+                    "name": "Tokyo",
+                    "title": "东京",
+                    "imageURL": "https://z0.muscache.com/airbnb/static/homepages/china/destinations/tokyo-028a471568ba0bc97e136a464a88eff0.jpg",
+                    "href": "/s/Tokyo--Japan"
+                  },
+                  {
+                    "name": "Rio de Janeiro",
+                    "title": "里约热内卢",
+                    "imageURL": "https://z2.muscache.com/airbnb/static/homepages/china/destinations/rio-c5c6d7640d674bc1b6c6cb4b867d48f1.jpg",
+                    "href": "/s/Rio-de-Janeiro--Brazil"
+                  },
+                  {
+                    "name": "London",
+                    "title": "伦敦",
+                    "imageURL": "https://z2.muscache.com/airbnb/static/homepages/china/destinations/london-5b146595a6754a9a11538b4a7b432745.jpg",
+                    "href": "/s/London--United-Kingdom"
+                  },
+                  {
+                    "name": "Seoul",
+                    "title": "首尔",
+                    "imageURL": "https://z1.muscache.com/airbnb/static/homepages/china/destinations/seoul-402806bb337c3b8c9ab476bb640838d2.jpg",
+                    "href": "/s/Seoul--South-Korea"
+                  },
+                  {
+                    "name": "Sydney",
+                    "title": "悉尼",
+                    "imageURL": "https://z1.muscache.com/airbnb/static/homepages/china/destinations/sydney-c705a0549981e4136c2f8abcc9d0022e.jpg",
+                    "href": "/s/Sydney--New-South-Wales--Australia"
+                  },
+                  {
+                    "name": "Bangkok",
+                    "title": "曼谷",
+                    "imageURL": "https://z0.muscache.com/airbnb/static/homepages/china/destinations/bangkok-4e1f6877972f4ce71848cbe4b88282a0.jpg",
+                    "href": "/s/Bangkok-Thailand"
+                  },
+                  {
+                    "name": "Boston",
+                    "title": "波士顿",
+                    "imageURL": "https://z2.muscache.com/airbnb/static/homepages/china/destinations/boston-40cc5b24426bed67ca3157a182491b87.jpg",
+                    "href": "/s/Boston--MA--United-States"
+                  },
+                  {
+                    "name": "Paris",
+                    "title": "巴黎",
+                    "imageURL": "https://z2.muscache.com/airbnb/static/homepages/china/destinations/paris-4927d554632f52f6ac52d73691bea4e0.jpg",
+                    "href": "/s/Paris--France"
+                  },
+                  {
+                    "name": "Los Angeles",
+                    "title": "洛杉矶",
+                    "imageURL": "https://z0.muscache.com/airbnb/static/homepages/china/destinations/los_angeles-03df5b4cce0d06cbb2c0e0093ea82b2d.jpg",
+                    "href": "/s/Los-Angeles--CA--United-States"
+                  },
+                  {
+                    "name": "Kuala-Lumpur",
+                    "title": "吉隆坡",
+                    "imageURL": "https://z0.muscache.com/airbnb/static/homepages/china/destinations/kuala_lumpur-bdf1fed086615b7c8bc321120e97d43f.jpg",
+                    "href": "/s/Kuala-Lumpur-Federal-Territory-of-Kuala-Lumpur-Malaysia"
+                  }]
+                }],
+                "phrases": {},
+                "trebuchets": {}
+              }--></script>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <div id="footer" class="container-brand-dark footer-surround footer-container">
+      <footer class="page-container-responsive" role="contentinfo">
+        <div class="row row-condensed">
+          <div class="col-md-3 col-md-offset-1">
+            <div class="language-curr-picker clearfix space-2">
+              <div class="language-picker"></div>
+              <div class="currency-picker"></div>
+              <div class="cx-number"></div>
+            </div>
+            <div id="instant-help-footer" class="hide" data-instant-help="+86 40 0716 0164">
+              <h4>需要帮助？</h4>
+              <a class="link-reset" href="/help">访问帮助中心</a>
+              <div>电话支持：+86 40 0716 0164</div></div>
+          </div>
+          <div class="col-md-2 col-md-offset-1 hide-sm">
+            <h2 class="h5">公司信息</h2>
+            <ul class="list-layout">
+              <li>
+                <a href="/about/about-us" class="link-contrast">关于</a></li>
+              <li>
+                <a href="/careers" class="link-contrast">工作机会</a></li>
+              <li>
+                <a href="/press/news" class="link-contrast">新闻</a></li>
+              <li>
+                <a href="http://blog.airbnb.com" class="link-contrast">博客</a></li>
+              <li>
+                <a href="/help?from=footer" class="link-contrast">帮助</a></li>
+              <li>
+                <a href="/policies" class="link-contrast">政策</a></li>
+              <li>
+                <a href="/disaster-response" class="link-contrast">灾难响应</a></li>
+              <li>
+                <a href="/terms" class="link-contrast">条款与隐私</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 hide-sm">
+            <h2 class="h5">发现</h2>
+            <ul class="list-layout">
+              <li>
+                <a href="/trust" class="link-contrast">信任与安全</a></li>
+              <li>
+                <a href="/invite?r=6" class="link-contrast">旅行基金</a></li>
+              <li>
+                <a href="/gift?s=footer" class="link-contrast">礼品卡</a></li>
+              <li>
+                <a href="/wishlists/airbnb_picks" class="link-contrast">Airbnb精选</a></li>
+              <li>
+                <a href="/mobile" class="link-contrast">移动版</a></li>
+              <li>
+                <a href="https://www.airbnbaction.com?utm_source=airbnb&amp;utm_medium=footer&amp;utm_campaign=product" class="link-contrast" target="_blank">Airbnb行动力</a></li>
+              <li>
+                <a href="/business-travel?s=footer" class="link-contrast">商务差旅</a></li>
+              <li>
+                <a href="/sitemaps" class="link-contrast">网站地图</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 hide-sm">
+            <h2 class="h5">出租</h2>
+            <ul class="list-layout">
+              <li>
+                <a href="/host" class="link-contrast">为什么要出租?</a></li>
+              <li>
+                <a href="/hospitality" class="link-contrast">好客之道</a></li>
+              <li>
+                <a href="/help/responsible-hosting" class="link-contrast">房东义务</a></li>
+              <li>
+                <a href="/home-safety" class="link-contrast">居家安全</a></li>
+              <li>
+                <a href="/host/instant" class="link-contrast">即时预订</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 space-4 space-top-4 show-sm">
+          <ul class="list-layout list-inline text-center h5">
+            <li>
+              <a href="/about/about-us" class="link-contrast">关于</a></li>
+            <li>
+              <a href="/careers" class="link-contrast">工作机会</a></li>
+            <li>
+              <a href="/press/news" class="link-contrast">新闻</a></li>
+            <li>
+              <a href="http://blog.airbnb.com" class="link-contrast">博客</a></li>
+            <li>
+              <a href="/terms" class="link-contrast">条款与隐私</a></li>
+          </ul>
+        </div>
+        <hr class="footer-divider space-top-8 space-4 hide-sm">
+        <div class="text-center">
+          <h2 class="h5 space-4 hide-sm">关注我们</h2>
+          <ul class="list-layout list-inline" itemscope itemtype="http://schema.org/Organization">
+            <link itemprop="url" href="https://zh.airbnb.com">
+            <meta itemprop="logo" content="https://z2.muscache.com/airbnb/static/logos/belo-200x200-4d851c5b28f61931bf1df28dd15e60ef.png">
+            <li>
+              <a href="http://www.weibo.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+                <span class="screen-reader-only">微博</span>
+                <i class='icon footer-icon icon-weibo'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+                <span class="screen-reader-only">领英</span>
+                <i class='icon footer-icon icon-linkedin'></i>
+              </a>
+            </li>
+          </ul>
+          <div class="space-top-2 text-muted">&copy; MOGU, Inc.</div></div>
+      </footer>
+    </div>
+  </body>
 </html>
